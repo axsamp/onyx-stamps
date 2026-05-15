@@ -100,13 +100,13 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#C084FC]/30">
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#FFC107]/30">
       <div className="max-w-md mx-auto flex flex-col p-6 min-h-screen">
         
         {/* Header */}
         <header className="flex justify-between items-center py-6">
           <div className="flex items-center gap-2">
-            <div className="w-1.5 h-6 bg-[#C084FC]" />
+            <div className="w-1.5 h-6 bg-[#FFC107]" />
             <h1 className="text-xl font-black uppercase tracking-tighter">Onyx Stamp</h1>
           </div>
           <div className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest border border-zinc-900 px-3 py-1">Collector_v1</div>
@@ -114,7 +114,7 @@ export default function App() {
 
         {/* Hero / Stats */}
         <section className="mt-4 mb-10">
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C084FC] block mb-1">Goshuin-cho</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#FFC107] block mb-1">Goshuin-cho</span>
           <h2 className="text-5xl font-black tracking-tighter uppercase overflow-hidden">
             Stamp<br/>Collection
           </h2>
@@ -149,7 +149,7 @@ export default function App() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                 <div className="absolute bottom-3 left-3 text-left">
                   <div className="onyx-card-inner flex flex-col justify-end p-3">
-                    <p className="text-[8px] font-bold text-[#C084FC] uppercase transform -rotate-90 origin-left absolute top-10 right-[-20px] tracking-widest">{stamp.date.replace(/-/g, '.')}</p>
+                    <p className="text-[8px] font-bold text-[#FFC107] uppercase transform -rotate-90 origin-left absolute top-10 right-[-20px] tracking-widest">{stamp.date.replace(/-/g, '.')}</p>
                     <p className="text-[10px] font-black uppercase tracking-tight truncate w-full">{stamp.location}</p>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ export default function App() {
           <motion.button 
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsAdding(true)}
-            className="h-16 w-16 bg-[#C084FC] flex items-center justify-center shadow-lg shadow-[#C084FC]/20 rounded-none"
+            className="h-16 w-16 bg-[#FFC107] flex items-center justify-center shadow-lg shadow-[#FFC107]/20 rounded-none"
           >
             <Plus size={32} className="text-black" strokeWidth={3} />
           </motion.button>
@@ -187,7 +187,7 @@ export default function App() {
                     <img src={newStamp.image} className="w-full h-full object-cover" alt="Preview" />
                   ) : (
                     <>
-                      <Camera size={48} className="text-zinc-800 mb-4 group-hover:text-[#C084FC] transition-colors" />
+                      <Camera size={48} className="text-zinc-800 mb-4 group-hover:text-[#FFC107] transition-colors" />
                       <span className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest">Tap to capture stamp</span>
                     </>
                   )}
@@ -244,7 +244,7 @@ export default function App() {
                   <img src={viewingStamp.image} className="w-full aspect-square object-contain shadow-2xl" alt="Stamp Detail" />
                   
                   <div className="mt-8 space-y-2">
-                    <div className="flex items-center gap-2 text-[#C084FC]">
+                    <div className="flex items-center gap-2 text-[#FFC107]">
                       <MapPin size={14} />
                       <span className="text-sm font-black uppercase tracking-tight">{viewingStamp.location}</span>
                     </div>
@@ -257,7 +257,7 @@ export default function App() {
                   <div className="mt-12 pt-6 border-t border-zinc-900/50 flex justify-between items-center">
                     <div className="flex flex-col">
                       <span className="text-[8px] font-bold text-zinc-700 uppercase">Authentication</span>
-                      <span className="text-[10px] font-black uppercase text-[#C084FC]">Verified_Stamp</span>
+                      <span className="text-[10px] font-black uppercase text-[#FFC107]">Verified_Stamp</span>
                     </div>
                     <div className="flex gap-3">
                       <button className="text-zinc-600 hover:text-white"><Share2 size={20} /></button>
