@@ -1,19 +1,16 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
-  --color-g-bg: var(--theme-g-bg);
-  --color-g-surface: var(--theme-g-surface);
-  --color-g-primary: var(--theme-g-primary);
-  --color-g-primary-container: var(--theme-g-primary-container);
-  --color-g-text: var(--theme-g-text);
-  --color-g-text-variant: var(--theme-g-text-variant);
-  --color-g-outline: var(--theme-g-outline);
-  --color-g-aluminium: var(--theme-g-aluminium);
+  --color-g-bg: #F0F4F8;
+  --color-g-surface: #FFFFFF;
+  --color-g-primary: #0B57D0;
+  --color-g-primary-container: #D3E3FD;
+  --color-g-text: #1F1F1F;
+  --color-g-text-variant: #444746;
+  --color-g-outline: #C4C7C5;
+  --color-g-aluminium: #E8EAED;
 
-  --font-sans: 'Inter', sans-serif;
-  --font-display: 'Outfit', sans-serif;
+  --font-sans: 'DM Sans', sans-serif;
   --font-mono: 'Roboto Mono', monospace;
 
   --shadow-elevation-1: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
@@ -22,28 +19,6 @@
 }
 
 @layer base {
-  :root {
-    --theme-g-bg: #F0F4F8;
-    --theme-g-surface: #FFFFFF;
-    --theme-g-primary: #0B57D0;
-    --theme-g-primary-container: #D3E3FD;
-    --theme-g-text: #1F1F1F;
-    --theme-g-text-variant: #444746;
-    --theme-g-outline: #C4C7C5;
-    --theme-g-aluminium: #E8EAED;
-  }
-
-  .dark {
-    --theme-g-bg: #202124;
-    --theme-g-surface: #303134;
-    --theme-g-primary: #8AB4F8;
-    --theme-g-primary-container: #3C4043;
-    --theme-g-text: #E8EAED;
-    --theme-g-text-variant: #9AA0A6;
-    --theme-g-outline: #5F6368;
-    --theme-g-aluminium: #282A2D;
-  }
-
   body {
     @apply bg-g-bg text-g-text font-sans antialiased;
     overflow-x: hidden;
@@ -61,28 +36,13 @@
 }
 
 @layer components {
-  /* Material Card Style - M3 Expressive Tokens */
   .material-card {
-    background-color: var(--theme-g-surface);
-    border-radius: 32px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.03), 0px 1px 3px rgba(0, 0, 0, 0.02);
-    border: 1px solid var(--theme-g-outline);
-    transition: background-color 0.5s cubic-bezier(0.2, 0, 0, 1), border-color 0.5s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.5s cubic-bezier(0.2, 0, 0, 1);
+    background: #FFFFFF;
+    border-radius: 24px;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0,0,0,0.03);
   }
 
-  /* Frosted Glass overlay matching standard nav */
-  .frosted-nav {
-    background-color: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(24px) saturate(190%);
-    -webkit-backdrop-filter: blur(24px) saturate(190%);
-    transition: background-color 0.5s cubic-bezier(0.2, 0, 0, 1);
-  }
-
-  .dark .frosted-nav {
-    background-color: rgba(48, 49, 52, 0.65);
-  }
-
-  /* Material Ripple effect simulation */
   .ripple {
     position: relative;
     overflow: hidden;
